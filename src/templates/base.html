@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    
+    <link rel="shortcut icon" type="image/png" href="{% static '../static/img/favicon.png' %}">
+    <link rel="stylesheet" href="{% static '../static/css/styles.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <title>Pattern Pal</title>
+  </head>
+  <body>
+
+    <div id="info-container">
+      <h1>Pattern Pal</h1>
+      <h1>Hello, Paula</h1>
+    </div>
+    <div id="app">
+      <div>
+        [[ message ]]
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div id="section-container"></div>
+
+      {% block content %}
+      {% endblock %}
+
+    </div>
+    
+  </body>
+  <script src="../static/js/renderer.js"></script>
+  <script>
+    var app = new Vue({
+      delimiters: ["[[","]]"],
+      el: '#app',
+      data: {
+        message: 'Hell PERSON'
+      },
+    });
+  </script>
+</html>

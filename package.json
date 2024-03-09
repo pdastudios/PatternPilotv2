@@ -4,8 +4,9 @@
   "description": "Crouchet pattern writting app.",
   "main": "main.js",
   "scripts": {
-    "start":"electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "patternpilot": "electron ."
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,8 @@
   "homepage": "https://github.com/pdastudios/PatternPilotv2#readme",
   "devDependencies": {
     "electron": "^29.1.0"
+  },
+  "dependencies": {
+    "vue": "^3.4.21"
   }
 }

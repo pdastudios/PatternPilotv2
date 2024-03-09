@@ -1,31 +1,30 @@
-const { app, BrowserWindow, ipcMain } = require('electron/main')
-const path = require('node:path')
+const { app, BrowserWindow, ipcMain } = require('electron/main');
+const path = require('node:path');
 
 const createWindow = () => {
   const win = new BrowserWindow({
+    title: "Pattern Pilot",
     width: 800,
-    height: 600,
-    webPreferences: {
-      preload: path.join(__dirname, 'src/js/preload.js')
-    }
-  })
+    height: 600
+  });
 
-  win.loadFile('src/templates/index.html')
+  const appURL = "http://127.0.0.1:8000/";
+
+  win.loadURL(appURL)
 }
 
 app.whenReady().then(() => {
-    ipcMain.handle('ping', () => 'pong')
-    createWindow()
+    createWindow();
 
   app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) {
-      createWindow()
+      createWindow();
     }
   })
-})
+});
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
-    app.quit()
+    app.quit();
   }
-})
+});
