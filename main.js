@@ -8,7 +8,7 @@ const createWindow = () => {
     height: 600
   });
 
-  const appURL = "http://127.0.0.1:8000/";
+  const appURL = "http://192.168.1.4:8081/";
 
   win.loadURL(appURL)
 }

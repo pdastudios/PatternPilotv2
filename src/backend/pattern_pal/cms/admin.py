@@ -7,5 +7,9 @@ class ProjectAdmin(admin.ModelAdmin):
     readonly_fields = ('created', 'modified')
 
 admin.site.register(Project, ProjectAdmin)
-admin.site.register(Shape)
+
+class ShapeAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name')
+
+admin.site.register(Shape, ShapeAdmin)
 admin.site.register(Round)
