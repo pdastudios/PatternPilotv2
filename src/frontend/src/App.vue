@@ -1,21 +1,24 @@
 <template>
-  <div id="app">
     <!-- Your template code here -->
-    <PatternCalc />
-  </div>
+    <div id="app">
+        <router-view/>
+    </div>
 </template>
 
+<!--
 <script>
 
 //import draggable from 'vuedraggable';
-import PatternCalc from "./components/PatternCalc.vue";
+//import PatternCalc from "./components/PatternCalc.vue";
+//import PatternTrack from "./components/PatternTrack.vue";
 //./components/BACKUP_PatternCalc.vue
 
-export default {
+//export default {
   name: 'App',
-  components: {
-    PatternCalc
-  }
-}
+  //components: {
+ //   PatternCalc,
+ //   PatternTrack
+  //}
+//}
 
-</script>./components/BACKUP2_PatternCalc.vue
+</script>-->

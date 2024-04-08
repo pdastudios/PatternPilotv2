@@ -1,7 +1,7 @@
 <template>
     <div id="app" class="row">
         <div class="col">
-            <button @click="navigateToTrack">Go to PatternTrack</button>
+            <h1>THIS IS THE TRACK ONE</h1>
         </div>
         <div class="col">
             <form @submit.prevent="submitShape()" >
@@ -66,8 +66,7 @@
 //import draggable from 'vuedraggable';
 
 export default {
-    name: 'PatternCalc',
-
+    name: 'PatternTrack',
     data() {
         return {
             shapes: [],
@@ -132,9 +131,9 @@ export default {
             }
         },
 
-        navigateToTrack() {
+        navigateToOtherPage() {
             // Replace 'http://example.com' with the URL you want to navigate to
-            this.$router.push('/track');
+            window.location.href = 'track.html';
         },
 
         async submitRound() {

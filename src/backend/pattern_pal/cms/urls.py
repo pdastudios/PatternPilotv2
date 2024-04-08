@@ -1,4 +1,5 @@
-from django.urls import path
+from django.urls import path, re_path
+from django.views.generic import TemplateView
 from rest_framework import routers
 from . import views
 
@@ -17,3 +18,8 @@ urlpatterns = [
 
 # Add router URLs to urlpatterns
 urlpatterns += router.urls
+
+# Catch-all route for serving Vue app
+#urlpatterns += [
+#    re_path(r'^.*$', TemplateView.as_view(template_name='index.html')),
+#]
